@@ -8,7 +8,9 @@ var Year = function(input) {
 };
 
 Year.prototype.isLeap = function() {
-  if ((this.value % 4) == 0) {
+  if ((this.value % 100) == 0) {
+    return false;
+  } else if ((this.value % 4) == 0) {
     return true;
   } else {
     return false;

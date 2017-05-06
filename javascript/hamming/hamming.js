@@ -10,7 +10,7 @@ Hamming.prototype.compute = function (strand1, strand2) {
   // walk through strands and count the differences
   var count = 0;
   for (var i = 0; i < strand1.length; i++) {
-    if (strand1 !== strand2) {
+    if (strand1[i] !== strand2[i]) {
       count++;
     }
   };

@@ -15,7 +15,7 @@ describe('Hamming', function () {
     expect(hamming.compute('AG','CT')).toEqual(2);
   });
 
-  xit('small hamming distance', function () {
+  it('small hamming distance', function () {
     expect(hamming.compute('AT','CT')).toEqual(1);
   });
 

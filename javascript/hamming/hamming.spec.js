@@ -19,19 +19,19 @@ describe('Hamming', function () {
     expect(hamming.compute('AT','CT')).toEqual(1);
   });
 
-  xit('small hamming distance in longer strand', function () {
+  it('small hamming distance in longer strand', function () {
     expect(hamming.compute('GGACG', 'GGTCG')).toEqual(1);
   });
 
-  xit('large hamming distance', function () {
+  it('large hamming distance', function () {
     expect(hamming.compute('GATACA', 'GCATAA')).toEqual(4);
   });
 
-  xit('hamming distance in very long strand', function () {
+  it('hamming distance in very long strand', function () {
     expect(hamming.compute('GGACGGATTCTG', 'AGGACGGATTCT')).toEqual(9);
   });
 
-  xit('throws error when strands are not equal length', function() {
+  it('throws error when strands are not equal length', function() {
     expect(function() { hamming.compute('GGACGGATTCTG', 'AGGAC'); }).toThrow(
       new Error('DNA strands must be of equal length.')
     );

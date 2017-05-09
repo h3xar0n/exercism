@@ -1,7 +1,7 @@
 var Hamming = require('./hamming');
+var hamming = new Hamming();
 
 describe('Hamming', function () {
-  var hamming = new Hamming();
 
   it('no difference between identical strands', function () {
     expect(hamming.compute('A', 'A')).toEqual(0);

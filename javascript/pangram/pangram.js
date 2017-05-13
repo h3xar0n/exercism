@@ -8,12 +8,16 @@ Pangram.prototype.isPangram = function() {
   
   var letters = "abcdefghijklmnopqrstuvwxyz"
 
-  for (var i = 0; i < 26; i++)
+  if (string != letters) {
+    return false
+  } else
+  for (var i = 0; i < 26; i++) {
     if (string.indexOf(letters[i]) < 0) {
       return false
     } else {
       return true
     }
+  }
 }
 
 module.exports = Pangram;

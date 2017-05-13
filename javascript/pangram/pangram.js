@@ -1,23 +1,17 @@
-var Pangram = function(string) {
-  this.value = string
-}
+function Pangram(string) {
+  this.value = string;
+};
 
 Pangram.prototype.isPangram = function() {
-  var string = this.value
-  string = string.toLowerCase().replace(/[^a-z]/g,'')
-  
-  var letters = "abcdefghijklmnopqrstuvwxyz"
+  // Convert string to lowercase 
+  var string = this.value.toLowerCase();
 
-  if (string != letters) {
-    return false
-  } else
-  for (var i = 0; i < 26; i++) {
-    if (string.indexOf(letters[i]) < 0) {
-      return false
-    } else {
-      return true
-    }
-  }
-}
+  // Use regex to attract all unique letters from string
+  var regex = /([a-z])(?!.*\1)/g;
 
-module.exports = Pangram;
+  // Check if the number of unique letters is 26
+  return (string.match(regex) || []).length === 26;
+};
+
+
+module.exports = Pangram

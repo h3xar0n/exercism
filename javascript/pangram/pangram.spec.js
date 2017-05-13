@@ -12,7 +12,7 @@ describe('Pangram()', function()  {
     expect(pangram.isPangram()).toBe(true);
   });
 
-  it("missing character 'x'", function()  {
+  xit("missing character 'x'", function()  {
     var pangram = new Pangram("a quick movement of the enemy will jeopardize five gunboats");
     expect(pangram.isPangram()).toBe(false);
   });
